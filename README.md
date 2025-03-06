@@ -1,3 +1,6 @@
+**NOTE**: This repo has moved to [base/base-mcp](https://github.com/base/base-mcp)
+
+
 # Base MCP Server
 
 [![npm version](https://img.shields.io/npm/v/base-mcp.svg)](https://www.npmjs.com/package/base-mcp)
