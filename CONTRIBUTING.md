@@ -37,7 +37,7 @@ If you have an idea for an enhancement, please create an issue on GitHub with th
 4. Run tests to ensure your changes don't break existing functionality
 5. Commit your changes (`git commit -m 'Add some amazing feature'`)
 6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
+7. Open a Pull Request. Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) as your PR's title.
 
 ## Development Setup
 
