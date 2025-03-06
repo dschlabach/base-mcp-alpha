@@ -1,5 +1,8 @@
 # Base MCP Server
 
+[![npm version](https://img.shields.io/npm/v/base-mcp.svg)](https://www.npmjs.com/package/base-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A Model Context Protocol (MCP) server that provides onchain tools for Claude AI, allowing it to interact with the Base blockchain and Coinbase API.
 
 ## Overview
@@ -23,39 +26,61 @@ The server uses the Coinbase SDK to interact with the Base blockchain and Coinba
 
 ## Installation
 
+### Option 1: Install from npm (Recommended)
+
+```bash
+# Install globally
+npm install -g base-mcp
+
+# Or install locally in your project
+npm install base-mcp
+```
+
+### Option 2: Install from Source
+
 1. Clone this repository:
-   ```
+   ```bash
    git clone https://github.com/yourusername/base-mcp.git
    cd base-mcp
    ```
 
 2. Install dependencies:
-   ```
+   ```bash
    npm install
    ```
 
-3. Create a `.env` file with your credentials:
-   ```
-   # Coinbase API credentials
-   # You can obtain these from the Coinbase Developer Portal: https://cdp.coinbase.com/
-   COINBASE_API_KEY_NAME=your_api_key_name
-   COINBASE_API_PRIVATE_KEY=your_private_key
-
-   # Wallet seed phrase (12 or 24 words)
-   # This is the mnemonic phrase for your wallet
-   SEED_PHRASE=your seed phrase here
-   ```
-
-4. Build the project:
-   ```
+3. Build the project:
+   ```bash
    npm run build
    ```
 
-5. Test the MCP server:
+4. Optionally, link it globally:
+   ```bash
+   npm link
    ```
-   node test-mcp.js
-   ```
-   This script will verify that your MCP server is working correctly by testing the connection and available tools.
+
+## Configuration
+
+Create a `.env` file with your credentials:
+```
+# Coinbase API credentials
+# You can obtain these from the Coinbase Developer Portal: https://cdp.coinbase.com/
+COINBASE_API_KEY_NAME=your_api_key_name
+COINBASE_API_PRIVATE_KEY=your_private_key
+
+# Wallet seed phrase (12 or 24 words)
+# This is the mnemonic phrase for your wallet
+SEED_PHRASE=your seed phrase here
+```
+
+## Testing
+
+Test the MCP server to verify it's working correctly:
+```bash
+npm test
+```
+
+This script will verify that your MCP server is working correctly by testing the connection and available tools.
 
 ## Examples
 
@@ -157,3 +182,67 @@ If you encounter issues:
 ## License
 
 [MIT License](LICENSE)
+
+## Making Your MCP Discoverable
+
+To make your MCP server discoverable by other developers, follow these steps:
+
+### 1. Publish to npm
+
+```bash
+# Login to npm (you'll need an npm account)
+npm login
+
+# Publish the package
+npm publish
+```
+
+This will make your MCP server available on the npm registry, allowing other developers to install it using `npm install base-mcp`.
+
+### 2. Share Your GitHub Repository
+
+Make sure your GitHub repository is public and well-documented. Add the following to enhance discoverability:
+
+- A detailed README (like this one)
+- Examples of usage
+- Contributing guidelines
+- Issue templates
+
+### 3. Add to the MCP Directory
+
+The Model Context Protocol community maintains a directory of available MCP servers. Submit your MCP server to be included in this directory by running:
+
+```bash
+npm run submit
+```
+
+This script will:
+1. Check if your package is published to npm
+2. Verify your GitHub repository information
+3. Generate a submission file with all the necessary information
+4. Guide you through the submission process
+
+Alternatively, you can manually submit by:
+1. Visiting the [MCP Directory Repository](https://github.com/modelcontextprotocol/directory)
+2. Following the contribution guidelines to add your MCP server
+
+### 4. Promote in Relevant Communities
+
+Share your MCP server in communities where developers using Claude might be active:
+
+- Anthropic Developer Discord
+- Claude subreddit
+- AI/ML developer forums
+- Blockchain and Web3 communities
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please make sure your code follows the existing style and includes appropriate tests.
